@@ -1,0 +1,6 @@
+debian/templates/loris2.conf            etc/loris2
+www						                usr/share/loris2
+debian/templates/loris2.wsgi			usr/share/loris2/www
+bin/iiif_img_info				        usr/share/loris2/bin
+bin/loris-cache_clean.sh			    usr/share/loris2/bin
+bin/loris-http_cache_clean.sh			usr/share/loris2/bin

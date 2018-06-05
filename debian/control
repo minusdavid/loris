@@ -1,0 +1,33 @@
+Source: loris
+Maintainer: David Cook <dcook@prosentient.com.au>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python-setuptools (>= 0.6b3), python, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/loris-imageserver/loris
+
+Package: python-loris
+Architecture: all
+Depends: python-all, python-certifi, python-cffi, python-chardet, python-configobj, python-cryptography, python-enum34, python-idna, python-ipaddress, python-jwt, python-netaddr, python-pil, python-pycparser, python-requests, python-six, python-urllib3, python-werkzeug, libjpeg-turbo8-dev, libfreetype6-dev, zlib1g-dev, liblcms2-dev, liblcms2-utils, libtiff5-dev, python-dev, libwebp-dev, apache2, libapache2-mod-wsgi, ${misc:Depends}, ${python:Depends}
+Description: IIIF Image API 2.0 Level 2 compliant Image Server
+ Loris IIIF Image Server
+ =============================================================================
+ .
+ Loris is an implementation of the [IIIF Image API 2.0](http://iiif.io/api/image/2.0/).
+ .
+  * If you're looking for IIIF 1.1 support, please use the [last release in the 1.x series](https://github.com/pulibrary/loris/releases/tag/1.2.2).
+  * If you're looking for IIIF 1.0 support, [this release](https://github.com/pulibrary/loris/releases/tag/0.0.9alpha) is the closest Loris ever was, but there are known flaws, deployment is tough, and it is certainly not supported at this point.
+ .
+ [![Build Status](https://travis-ci.org/loris-imageserver/loris.svg?branch=development)](https://travis-ci.org/loris-imageserver/loris)
+ .
+ Demos
+ -----
+  * [Mentelin Bible, l. 1r](http://libimages.princeton.edu/loris2/pudl0001%2F5138415%2F00000011.jp2/full/full/0/default.jpg)
+  * [Scroll illustrating a story about the Sagami River](http://libimages1.princeton.edu/osd-demo/?feedme=pudl0123/8172070/01/00000001.jp2) with [OpenSeadragon](http://openseadragon.github.io/)
+ .
+ Installation Instructions
+ -------------------------
+ Loris is only supported on Python 2.7.x. If you need to use Python 2.6, Loris v2.1.0 is the last version to support it.
+ .
+ These instructions are known to work on Ubuntu 12.04 or greater and Python 2.7.x (but not 3.x). See below for some help with RedHat/CentOS and Debian.
+
