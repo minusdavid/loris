@@ -14,6 +14,8 @@ import os
 import shutil
 import stat
 
+import distutils.command.install as orig
+
 VERSION = loris.__version__
 
 EX_NOUSER = 67
@@ -100,9 +102,9 @@ class LorisInstallCommand(install):
         install.finalize_options(self)
 
     def run(self):
-        self.__make_directories()
-        self.__write_wsgi()
-        self.__copy_index_and_favicon()
+#        self.__make_directories()
+#        self.__write_wsgi()
+#        self.__copy_index_and_favicon()
         if self.dry_run:
             stdout.write('%sDEBUG INFO%s\n' % ('*'*35,'*'*35))
             stdout.write('kdu-expand: %s\n' % (self.kdu_expand,))
@@ -118,8 +120,9 @@ class LorisInstallCommand(install):
             stdout.write('loris-owner: %s\n' % (self.loris_owner,))
             stdout.write('loris-group: %s\n' % (self.loris_group,))
             stdout.write('*'*80+'\n')
-        self.do_egg_install()
-        self.__update_and_deploy_config()
+#        self.do_egg_install()
+        orig.install.run(self)
+#        self.__update_and_deploy_config()
 
     def __check_user(self):
         try:
